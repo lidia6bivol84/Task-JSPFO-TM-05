@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERATII ARITMETICE SIMPLE</title>
+</head>
+
+<body>
+    <script>
+        function Aduna(m, n) {
+            return m + n;
+        }
+
+        function Diferenta(m, n) {
+            if (m > n) return m - n;
+            else return n - m;
+        }
+
+        function Produs(m, n) {
+            return m * n;
+        }
+
+        function Impartire(m, n) {
+            if( n == 0 ) return document.write('Operatie interzisa') 
+            else return parseFloat(m / n);
+
+        }
+
+        let x = eval(prompt('Introduceti primul  numar ', 2));
+        let operatie = prompt('Alegeti operatia aritmetica ce se va efectua: a- adunare,' + 'd- diferenta, im- impartire, p-produsul');
+        let y = eval(prompt('Introduceti al 2-lea numar ', 2));
+
+
+
+        switch (operatie) {
+            case 'a': { document.write(`Suma numerelor ${x} si ${y} este:${Aduna(x, y)}`); break; }
+            case 'd': { document.write(`Diferenta numerelor ${x} si ${y} este: ${Diferenta(x, y)}`); break; }
+            case 'im': { document.write(`Rezultatul impartirii numerelor este:${Impartire(x, y).toFixed(2)}`); break; }
+            case 'p': { document.write(`Produsul numerelor ${x} si ${y} este: ${Produs(x, y)} `); break; }
+            default: { document.write('Ati introdus o operatie gresita'); break; }
+        }
+
+    </script>
+</body>
+
+</html>
